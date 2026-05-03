@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Typing Defender – Düşen kelimeleri yazarak savunan hızlı klavye oyunu. HTML, CSS ve JavaScript ile geliştirildi.">
+  <title>Typing Defender – Klavye Hız Oyunu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">⚡ TYPING DEFENDER</div>
+    <div class="stats">
+      <div class="stat-box">
+        <span class="stat-label">Skor</span>
+        <span class="stat-value" id="stat-score">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Seviye</span>
+        <span class="stat-value" id="stat-level">1</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Can</span>
+        <span class="stat-value" id="stat-hearts">❤️❤️❤️</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="controls">
+    <button class="btn" id="btn-start">▶ Başlat</button>
+    <button class="btn" id="btn-pause" disabled>⏸ Duraklat</button>
+    <button class="btn" id="btn-restart" disabled>↺ Yeniden</button>
+  </div>
+
+  <div id="arena">
+    <div class="danger-line"></div>
+    <div id="overlay">
+      <h2>TYPING DEFENDER</h2>
+      <p>Düşen kelimeleri yazarak savun!<br>Hızlı ol, hayatta kal! 🎯</p>
+      <button class="btn" id="btn-start-overlay"
+        style="margin-top:8px;background:linear-gradient(135deg,#059669,#22c55e);color:#fff;font-size:.85rem;padding:12px 28px;">
+        ▶ OYUNU BAŞLAT
+      </button>
+    </div>
+    <div id="level-banner"></div>
+  </div>
+
+  <div class="input-row">
+    <input type="text" id="word-input" placeholder="Kelimeyi buraya yaz…"
+      autocomplete="off" spellcheck="false" disabled />
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
