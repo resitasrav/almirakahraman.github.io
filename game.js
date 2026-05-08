@@ -18,7 +18,7 @@ const WORDS = [
 /* ── GAME STATE ── */
 let state = 'idle'; // idle | running | paused | over
 let score = 0;
-let lives = 3;
+let  = 5;
 let level = 1;
 let wordInterval   = null;
 let frameId        = null;
@@ -46,7 +46,7 @@ function randomWord() {
 }
 
 function getSpeed() {
-  return 40 + level * 12; // px/s
+  return 20 + level * 12; // px/s
 }
 
 function getSpawnInterval() {
